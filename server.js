@@ -2,7 +2,8 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
-const PORT = process.env.PORT || 3000;
+const PORT = parseInt(process.env.PORT, 10) || 3000;
+const HOST = process.env.HOST || '0.0.0.0';
 const PUBLIC_DIR = path.join(__dirname, 'public');
 
 const MIME_TYPES = {
@@ -20,6 +21,13 @@ const MIME_TYPES = {
 const server = http.createServer((req, res) => {
   // Normalize url
   let reqUrl = req.url.split('?')[0];
+
+  // Health check endpoint for Dokploy / Traefik
+  if (reqUrl === '/health' || reqUrl === '/ping') {
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ status: 'ok', uptime: process.uptime(), timestamp: Date.now() }));
+    return;
+  }
 
   // If requesting config.js
   if (reqUrl === '/config.js') {
@@ -77,10 +85,23 @@ const server = http.createServer((req, res) => {
   });
 });
 
-server.listen(PORT, () => {
+server.listen(PORT, HOST, () => {
   console.log('=========================================');
   console.log(' Access Locked Landing Page Server Active');
-  console.log(` URL: http://localhost:${PORT}`);
-  console.log(' Status: Awaiting ₹6,999 settlement');
+  console.log(` Listening on: http://${HOST}:${PORT}`);
+  console.log(' Dokploy / Docker Deployment Ready');
   console.log('=========================================');
 });
+
+// Graceful shutdown
+const shutdown = (signal) => {
+  console.log(`\nReceived ${signal}, gracefully shutting down...`);
+  server.close(() => {
+    console.log('Server closed successfully.');
+    process.exit(0);
+  });
+};
+
+process.on('SIGTERM', () => shutdown('SIGTERM'));
+process.on('SIGINT', () => shutdown('SIGINT'));
+
