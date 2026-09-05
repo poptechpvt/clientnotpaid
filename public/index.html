@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Platform Locked | Outstanding Payment Settlement Due</title>
+  
+  <!-- Modern Typography: Plus Jakarta Sans & Outfit from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <header class="top-nav">
+    <div class="nav-container">
+      <div class="brand-badge">
+        <span class="brand-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </span>
+        <span class="brand-text">PLATFORM ACCESS CONTROLLER</span>
+      </div>
+      <div class="status-indicator">
+        <span class="pulsing-dot"></span>
+        <span class="status-label">Access Suspended</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-container">
+    
+    <!-- Hero Notice Section -->
+    <section class="hero-section">
+      <div class="hero-badge">
+        <span class="badge-icon">⚠️</span>
+        <span>Payment Settlement Required</span>
+      </div>
+      
+      <h1 class="hero-title">This Website is Currently Locked</h1>
+      
+      <p class="hero-subtitle">
+        Public access, backend services, and hosting infrastructure have been temporarily paused because project payment dues remain unpaid.
+      </p>
+
+      <div class="notice-card">
+        <div class="notice-icon-box">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="12"></line>
+            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+          </svg>
+        </div>
+        <div class="notice-content">
+          <h2 class="notice-heading">Notice to Site Owner / Client</h2>
+          <p class="notice-text">
+            All files, databases, and source code are securely preserved. To instantly lift this lock and re-enable live DNS routing, cloud hosting, and API gateways, please settle the outstanding balance below and inform the system administrator.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prominent Outstanding Amount Card -->
+    <section class="due-banner-section">
+      <div class="due-card">
+        <div class="due-card-header">
+          <span class="due-title-tag">INVOICE SUMMARY</span>
+          <span class="due-inv-id" id="invoiceNumber">Ref: INV-2026-0849</span>
+        </div>
+
+        <div class="due-amount-row">
+          <div class="due-amount-wrapper">
+            <span class="due-currency">₹</span>
+            <span class="due-value" id="currentPendingDisplay">6,999</span>
+          </div>
+          <div class="due-meta">
+            <span class="due-status-pill">Payment Pending</span>
+            <span class="due-time-note">Immediate release upon UTR confirmation</span>
+          </div>
+        </div>
+
+        <div class="due-actions">
+          <a href="#admin-contact" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            Contact Admin to Unlock
+          </a>
+          <button id="openConfirmModalBtn" class="btn btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            I Have Paid (Send UTR)
+          </button>
+          <button id="printInvoiceBtn" class="btn btn-ghost" title="Print or Save as PDF">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 6 2 18 2 18 9"></polyline>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+              <rect x="6" y="14" width="12" height="8"></rect>
+            </svg>
+            Print Bill
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Itemized Billing Ledger -->
+    <section class="invoice-section">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Itemized Billing Statement</h2>
+          <p class="section-desc">Transparent breakdown of project disbursements, credits applied, and outstanding fees.</p>
+        </div>
+        <div class="invoice-date-tag">
+          <span>Billing Date: <strong>Sept 5, 2026</strong></span>
+        </div>
+      </div>
+
+      <div class="table-card">
+        <div class="table-responsive">
+          <table class="bill-table">
+            <thead>
+              <tr>
+                <th class="col-item">Service / Description</th>
+                <th class="col-status text-center">Status</th>
+                <th class="col-cost text-right">Incurred Cost</th>
+                <th class="col-payable text-right">Balance Due</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Line Item 1: Domain -->
+              <tr class="item-row item-settled">
+                <td class="col-item">
+                  <div class="item-title">Custom Domain Registration (1 Year)</div>
+                  <div class="item-meta">Direct top-level domain acquisition & primary DNS configuration</div>
+                </td>
+                <td class="col-status text-center">
+                  <span class="badge badge-paid">✓ Paid (₹1,000)</span>
+                </td>
+                <td class="col-cost text-right">₹1,000</td>
+                <td class="col-payable text-right settled-val">₹0</td>
+              </tr>
+
+              <!-- Line Item 2: Advance Kickoff -->
+              <tr class="item-row item-settled">
+                <td class="col-item">
+                  <div class="item-title">Project Initiation Deposit / Advance</div>
+                  <div class="item-meta">Initial commitment to start project architecture & development</div>
+                </td>
+                <td class="col-status text-center">
+                  <span class="badge badge-paid">✓ Paid (₹300)</span>
+                </td>
+                <td class="col-cost text-right">₹300</td>
+                <td class="col-payable text-right settled-val">₹0</td>
+              </tr>
+
+              <!-- Line Item 3: API Credit Token Subsidy -->
+              <tr class="item-row item-discount">
+                <td class="col-item">
+                  <div class="item-title">API Credit Token Package</div>
+                  <div class="item-meta">High-throughput developer AI/API token allocation (₹15,000 value)</div>
+                </td>
+                <td class="col-status text-center">
+                  <span class="badge badge-discount">100% Discount Applied</span>
+                </td>
+                <td class="col-cost text-right struck-cost">₹15,000</td>
+                <td class="col-payable text-right discount-val">-₹15,000</td>
+              </tr>
+
+              <!-- Line Item 4: Cloud Server & API Integration -->
+              <tr class="item-row item-pending">
+                <td class="col-item">
+                  <div class="item-title">Cloud Hosting & Production API Cost</div>
+                  <div class="item-meta">Dedicated cloud hosting setup, SSL certificates, and active API gateway connection</div>
+                </td>
+                <td class="col-status text-center">
+                  <span class="badge badge-pending">● Payment Pending</span>
+                </td>
+                <td class="col-cost text-right">₹6,999</td>
+                <td class="col-payable text-right pending-val">₹6,999</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Ledger Calculation Summary Box -->
+        <div class="ledger-summary">
+          <div class="summary-line">
+            <span class="summary-label">Gross Value of Services & Resources:</span>
+            <span class="summary-num">₹23,299</span>
+          </div>
+          <div class="summary-line highlight-green">
+            <span class="summary-label">Promotional API Credit Token Subsidy:</span>
+            <span class="summary-num">-₹15,000</span>
+          </div>
+          <div class="summary-line highlight-green">
+            <span class="summary-label">Payments Previously Received (Domain ₹1,000 + Advance ₹300):</span>
+            <span class="summary-num">-₹1,300</span>
+          </div>
+          <div class="summary-divider"></div>
+          <div class="summary-line total-line">
+            <div class="total-label-group">
+              <span class="total-label">Current Net Pending to Unlock:</span>
+              <span class="total-subtext">(Hosting + Production API Cost after ₹15,000 credit token discount)</span>
+            </div>
+            <span class="total-num">₹6,999</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Unlock Platform: Contact Admin Section -->
+    <section id="admin-contact" class="contact-section">
+      <div class="section-header text-center">
+        <h2 class="section-title">To Unlock This Platform, Contact Admin</h2>
+        <p class="section-desc">Reach out directly on WhatsApp to verify payment and instantly reactivate the website.</p>
+      </div>
+
+      <div class="contact-single-container">
+        <div class="contact-card primary-contact single-whatsapp-card">
+          <div class="contact-card-top">
+            <div class="contact-icon whatsapp-bg">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+              </svg>
+            </div>
+            <span class="contact-badge-recom">Official Admin WhatsApp</span>
+          </div>
+
+          <h3 class="contact-card-title">WhatsApp Support</h3>
+          <p class="contact-card-info">
+            Directly message the administrator with your payment receipt or UTR reference to verify the ₹6,999 settlement and unlock this website immediately.
+          </p>
+
+          <div class="wa-direct-display">
+            <span class="wa-label">Direct WhatsApp:</span>
+            <a href="https://wa.me/919734039294" target="_blank" rel="noopener noreferrer" class="wa-phone-number">+91 97340 39294</a>
+          </div>
+
+          <a id="whatsappBtn" href="https://wa.me/919734039294" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp w-full btn-large">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+            <span>Chat on WhatsApp (+91 97340 39294)</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ / Important Notes -->
+    <section class="faq-section">
+      <div class="faq-card">
+        <h3 class="faq-card-title">Frequently Asked Questions</h3>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h4 class="faq-q">How quickly will the website unlock after payment?</h4>
+            <p class="faq-a">As soon as the administrator verifies the ₹6,999 payment reference (UTR), production hosting and DNS routes will be unblocked within 15 to 30 minutes.</p>
+          </div>
+          <div class="faq-item">
+            <h4 class="faq-q">What happened to the ₹15,000 API token cost?</h4>
+            <p class="faq-a">A promotional developer discount subsidy of ₹15,000 was deducted completely, leaving only the hosting deployment and production server connection dues.</p>
+          </div>
+          <div class="faq-item">
+            <h4 class="faq-q">Is any project work or data lost?</h4>
+            <p class="faq-a">No. All database records, code repositories, content, and server configurations are safely backed up and will be seamlessly reactivated.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+      <div class="footer-content">
+        <p class="footer-note">
+          Platform Locked by Administration • Automated Service Gate • Reference ID: <code>INV-2026-0849</code>
+        </p>
+        <p class="footer-sub">
+          Current Pending Balance: <strong>₹6,999 INR</strong> • Contact Administrator for Instant Reactivation
+        </p>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Payment Confirmation Modal -->
+  <div id="confirmModal" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-box" role="dialog" aria-labelledby="modalTitle">
+      <button id="closeModalBtn" class="modal-close-btn" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <div class="modal-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+        </div>
+        <div>
+          <h3 id="modalTitle" class="modal-title">Notify Payment Completion</h3>
+          <p class="modal-desc">Submit your payment reference (UTR) to fast-track site unlocking.</p>
+        </div>
+      </div>
+
+      <form id="paymentNotifyForm" class="modal-form">
+        <div class="form-group">
+          <label for="payerName">Your Name / Organization</label>
+          <input type="text" id="payerName" class="form-input" placeholder="e.g. John Doe / Acme Inc." required>
+        </div>
+
+        <div class="form-group">
+          <label for="utrNumber">UTR / Transaction Reference Number (12 digits)</label>
+          <input type="text" id="utrNumber" class="form-input" placeholder="e.g. 423985710928" required>
+        </div>
+
+        <div class="form-group">
+          <label for="amountPaid">Settlement Amount Paid</label>
+          <input type="text" id="amountPaid" class="form-input" value="₹6,999" readonly>
+        </div>
+
+        <div class="modal-actions">
+          <button type="submit" class="btn btn-whatsapp w-full">
+            <span>Send UTR via WhatsApp to Admin</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast" class="toast" role="alert" aria-live="polite">
+    <span id="toastMsg">Copied to clipboard</span>
+  </div>
+
+  <script src="/config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
